@@ -1,0 +1,31 @@
+{
+  "outdir": "./dist",
+  "asar": true,
+  "files": [
+    "electron.js",
+    "preload.js",
+    "src/**/*",
+    "resources/**/*",
+    "node_modules/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": ["nsis", "portable"],
+    "certificateFile": null,
+    "certificatePassword": null
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "mac": {
+    "target": ["dmg", "zip"],
+    "category": "public.app-category.finance"
+  },
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "category": "Finance"
+  }
+}
